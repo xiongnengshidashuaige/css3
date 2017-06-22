@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div[myname]{
+				height: 40px;
+				width: 300px;
+				border: 1px solid black;
+			}
+			div[myname$='l']{
+				background: cadetblue;
+			}
+			div[myname*='l']{
+				background: red;
+			}
+			div[myname^='w']{
+				background: black;
+			}
+			div[myname|='wlat']{
+				background: blue;
+			}
+		div[myname~='wlat']{
+				background: green;
+			}
+			div[myname='wlat']{
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div myname='wlat'></div>
+		<div myname='pl'></div>
+		<div myname='wlat-le'></div>
+		<div myname='l'></div>
+	</body>
+</html>

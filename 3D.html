@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+				img{
+				width: 100%;
+				height: 100%;
+				opacity:0.6;
+				position: absolute;
+				}
+			.box{
+				-webkit-transform-origin:bottom top ; 
+				-webkit-transform-style: preserve-3d;
+				-webkit-perspective:9000px;
+				margin:400px 100px;
+				position: relative;
+				transition: all 10s;
+				height: 200px;
+				width: 200px;
+				}
+			.left{
+				-webkit-transform-origin:left;
+				-webkit-transform:rotateY(-90deg);
+			}	
+			.right{
+				-webkit-transform-origin:right;
+				-webkit-transform:rotateY(90deg);
+				}
+				.top{
+				-webkit-transform-origin:top;
+				-webkit-transform:rotateX(90deg);
+				}
+				.bottom{
+				-webkit-transform-origin:bottom;
+				-webkit-transform:rotateX(-90deg);
+				}
+				.ago{
+				-webkit-transform:translateZ(200px);
+				}
+			.box:hover{
+				-webkit-transform:rotateX(360deg) rotateY(360deg);
+				/*-webkit-animation-play-state: paused*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+				<img class="top" src="img/3.png"/>
+				<img class="bottom" src="img/u0.png"/>
+				<img class="left" src="img/2.png"/>
+				<img class="right" src="img/u1.png"/>
+				<img class="ago" src="img/u3.png"/>
+				<img class="after" src="img/u4.png"/>
+		</div>
+	</body>
+</html>
