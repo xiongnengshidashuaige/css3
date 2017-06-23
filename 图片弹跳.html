@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 400px;
+				height: 300px;
+				border: 1px solid black;
+				position: relative;
+			}
+			img{
+				width: 80%;
+				height: 100%;
+				position: absolute;
+				left: 10%;
+				/*opacity: 0.5;*/
+			}
+			button{
+				border-radius: 50%;
+				height: 40px;
+				width: 40px;
+				position: absolute;
+			}
+			.after{
+				top: 50%;
+				margin-top: -20px;
+			}
+			.front{
+				top: 50%;
+				margin-top: -20px;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<button class="after">后</button>
+			<button class="front">前</button>
+			<img src="img/u0.png"/>
+			<img src="img/u1.png"/>
+			<img src="img/u3.png"/>
+			<img src="img/u4.png"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var img=document.getElementsByTagName('img');
+		var after=document.getElementsByTagName('after');
+		var front=document.getElementsByTagName('front');
+			front.onclick=function(){
+			for(var i=0;i<3;i++){
+				
+			}
+		}
+	</script>
+</html>

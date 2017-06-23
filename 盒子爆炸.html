@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				/*border: 1px solid black;*/
+				height: 200px;
+				width: 200px;
+				position: relative;
+				margin:400px 300px;
+				-webkit-transition: all 10s;
+					-webkit-perspective:0px;
+				-webkit-transform-style:preserve-3d ;
+				/*-webkit-transform-origin: center center 100px;*/
+				-webkit-animation: move 10s infinite;
+			}
+		
+			.box1 img{
+			width: 100%;
+			height: 100%;
+			opacity:0.6;
+			position: absolute;
+			transition: all 1s;
+			}
+			.box2 img{
+			width: 100px;
+			height: 100px;
+			opacity:1;
+			position: absolute;
+			}
+			.box2{
+				-webkit-transform-style: preserve-3d;
+				/*-webkit-transform-origin:center center 50px;*/ 
+				-webkit-perspective:0px;
+				position: absolute;
+				
+				top: 50px;
+				left: 50px;
+				height: 100px;
+				width: 100px;
+				-webkit-transform: translateZ(50px);
+			}
+			.box2 .left{
+				-webkit-transform-origin:left;
+				-webkit-transform:rotateY(-90deg);
+			}	
+			.box2 .right{
+				-webkit-transform-origin:right;
+				-webkit-transform:rotateY(90deg);
+				}
+			.box2 .top{
+				-webkit-transform-origin:top;
+				-webkit-transform:rotateX(90deg);
+				}
+			.box2 .bottom{
+			-webkit-transform-origin:bottom;
+			-webkit-transform:rotateX(-90deg);
+			}
+			.box2 .ago{
+			-webkit-transform:translateZ(100px);
+				}
+			.box1{
+				-webkit-transform-style: preserve-3d;
+				-webkit-transform-origin:bottom top ; 
+				-webkit-perspective:0px;
+				position: absolute;
+				transition: all 10s;
+				/*margin:400px 300px;*/
+				height: 200px;
+				width: 200px;
+				top: 0;
+				left: 0;
+				}
+				@-webkit-keyframes move{
+					from{
+						-webkit-transform: rotateX(0) rotateY(0);
+					}
+					to{
+						-webkit-transform: rotateX(360deg) rotateY(360deg);
+					}
+				}
+			.box1 .left{
+				-webkit-transform-origin:left;
+				-webkit-transform:rotateY(-90deg);
+			}	
+			.box1 .right{
+				-webkit-transform-origin:right;
+				-webkit-transform:rotateY(90deg);
+				}
+			.box1 .top{
+				-webkit-transform-origin:top;
+				-webkit-transform:rotateX(90deg);
+				}
+			.box1 .bottom{
+			-webkit-transform-origin:bottom;
+			-webkit-transform:rotateX(-90deg);
+			}
+			.box1 .ago{
+			-webkit-transform:translateZ(200px);
+				}
+			/*.box1:hover{
+				-webkit-transform:rotateX(360deg) rotateY(360deg);
+				
+			}*/
+			.box1:hover .left{
+				-webkit-transform:translateX(-100px) rotateY(-90deg);
+			}
+			.box1:hover .right{
+				-webkit-transform:translateX(100px) rotateY(90deg);
+			}
+			.box1:hover .bottom{
+				-webkit-transform:translateY(100px) rotateX(-90deg);
+			}
+			.box1:hover .top{
+				-webkit-transform:translateY(-100px) rotateX(90deg);
+			}
+			.box1:hover .ago{
+				-webkit-transform:translateZ(300px);
+			}
+			.box1:hover .after{
+				-webkit-transform:translateZ(-100px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">
+					<img class="top" src="img/3.png"/>
+					<img class="bottom" src="img/u0.png"/>
+					<img class="left" src="img/2.png"/>
+					<img class="right" src="img/u1.png"/>
+					<img class="ago" src="img/u3.png"/>
+					<img class="after" src="img/u4.png"/>
+			</div>
+			<div class="box2">
+					<img class="top" src="img/3.png"/>
+					<img class="bottom" src="img/u0.png"/>
+					<img class="left" src="img/2.png"/>
+					<img class="right" src="img/u1.png"/>
+					<img class="ago" src="img/u3.png"/>
+					<img class="after" src="img/u4.png"/>
+			</div>
+		</div>
+	</body>
+</html>
